@@ -24,9 +24,7 @@
 
 package main
 
-when ODIN_OS == .Windows {
 import "core:c/libc"
-}
 import "core:os"
 import "core:fmt"
 import "core:time"
@@ -75,14 +73,14 @@ main :: proc()
 
 	{
 		y, m, _, _ := account_date(data_set[len(data_set)-2])
-		printf("        \e[33m[ Data-Set last dated to: %s %d ]\n", month[m], y)
-		printf("   [ Dates estimations after this date are predictions! ]\e[m\n")
+		printf("         \e[33m[ Data-Set last dated to: %s %d ]\n", month[m], y)
+		printf(" [ Dates estimations after this date are predictions! ]\e[m\n")
 	}
 
 	when ODIN_DEBUG {
 		avg := 0
 		cnt := 0
-		for i in 0..<5 {
+		for i in 0..<3 {
 			avg += data_set[len(data_set)-1-i] - data_set[len(data_set)-2-i]
 			cnt += 1
 		}
@@ -596,6 +594,10 @@ data_set := [?]int{
 	1607111101, // 2023 November
 	1616600000, // 2023 December
 
-	1632000000, // 2024 January
-	1643839998, // Prediction
+	1633600000, // 2024 January
+	1668200000, // 2024 February
+	1687000000, // 2024 March
+	1701500000, // 2024 April
+	
+	1724133333, // Prediction
 }
