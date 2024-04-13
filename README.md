@@ -1,4 +1,4 @@
-# SteamID Utility Tool
+# SteamID Conversion And Date Utility Tool
 This is a simple utility program for converting between different SteamID formats.
 
 ![SteamID utility program](https://github.com/xDahl/SteamID-Tool/blob/main/SteamIDProg.PNG?raw=true)
@@ -27,7 +27,7 @@ https://steamcommunity.com/profiles/76561198950729338
 https://steamcommunity.com/profiles/76561198951298639
 ```
 To do so, I first type `!3`, which sets the mode to only print SteamID3 formats.\
-Then I paste the list to the program, and I get:
+Then I paste the list to the program (MAKE SURE YOU HAVE ONE EMPTY LINE AT THE END), and I get:
 ```
 [U:1:931886498]
 [U:1:934338934]
@@ -37,6 +37,7 @@ Then I paste the list to the program, and I get:
 [U:1:981248779]
 [U:1:981288810]
 [U:1:990463610]
+[U:1:991032911]
 ```
 
 ## How the date estimations work:
