@@ -176,7 +176,7 @@ parse_id :: proc(b : []u8) -> (aid : int, ok : bool)
 
 		return num & 0xFFFFFFFF
 	}
-	
+
 	parse_hex :: proc(b : []u8) -> (num : int)
 	{
 		for v in b[:] {
@@ -295,7 +295,7 @@ account_date :: proc(accountid : int) -> (year, month, day, age : int)
 	} else {
 		index = binary_search(accountid + 1)
 	}
-	
+
 	start : int = ---
 	unix  := f64((time.now()._nsec / 1e+9) / 86400) + 719542.5
 
@@ -308,7 +308,7 @@ account_date :: proc(accountid : int) -> (year, month, day, age : int)
 		month = (index - 1) % 12
 	}
 	day = lerp(start, month_days[(index % 12)],
-			range(data_set[index - 1], data_set[index], accountid))
+		range(data_set[index - 1], data_set[index], accountid))
 
 	if index >= len(data_set) - 1 {
 		age = 0
@@ -598,6 +598,22 @@ data_set := [?]int{
 	1668200000, // 2024 February
 	1687000000, // 2024 March
 	1701500000, // 2024 April
-	
-	1724133333, // Prediction
+	1721005000, // 2024 May
+	1737300006, // 2024 June
+	1769200017, // 2024 July
+	1792650132, // 2024 August
+	1808300015, // 2024 September
+	1826970000, // 2024 October
+	1845244272, // 2024 November
+	1845940000, // 2024 December
+
+	1853307000, // 2025 January
+	1862090000, // 2025 February
+	1871100000, // 2025 March
+	1881400011, // 2025 April
+	1891050002, // 2025 May
+	1901350013, // 2025 June
+	1911250007, // 2025 July
+
+	1921200005, // Prediction
 }
