@@ -604,7 +604,7 @@ data_set := [?]int{
 	1792650132, // 2024 August
 	1808300015, // 2024 September
 	1826970000, // 2024 October
-	1845244272, // 2024 November
+	1838534272, // 2024 November
 	1845940000, // 2024 December
 
 	1853307000, // 2025 January
